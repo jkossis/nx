@@ -56,7 +56,7 @@ export async function hashTasksThatDoNotDependOnOutputsOfOtherTasks(
   // Hash each task individually with its specific environment
   await Promise.all(
     tasksToHash.map(async (task) => {
-      const taskEnv = getTaskSpecificEnv(task);
+      const taskEnv = getTaskSpecificEnv(task, projectGraph);
       const { value, details } = await hasher.hashTask(
         task,
         taskGraph,
