@@ -26,7 +26,7 @@ export function LaunchNxIntro() {
         </div>
         <div className="mt-8 flex w-full flex-col pb-10 lg:mt-0 lg:w-3/5 lg:pb-0 lg:pl-16">
           <h2>
-            <div className="font-input-mono mb-4 inline-block rounded-lg border border-slate-200 bg-white/40 p-4 px-6 py-4 text-sm text-xl font-extrabold leading-none tracking-tight shadow-sm transition hover:bg-white sm:text-2xl lg:text-2xl dark:border-slate-800/40 dark:bg-slate-800/60 dark:hover:bg-slate-800">
+            <div className="font-input-mono mb-4 inline-block rounded-lg border border-zinc-200 bg-white/40 p-4 px-6 py-4 text-sm text-xl font-extrabold leading-none tracking-tight shadow-sm transition hover:bg-white sm:text-2xl lg:text-2xl dark:border-zinc-800/40 dark:bg-zinc-800/60 dark:hover:bg-zinc-800">
               <span className="sr-only">Announcing Launch Nx on </span> February
               5-9, 2024
             </div>
@@ -49,7 +49,7 @@ export function LaunchNxIntro() {
 
           <a
             href="#conf"
-            className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-sky-500"
+            className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-blue-500"
           >
             <span className="group-hover:underline">Watch the talks</span>
             <svg
@@ -72,7 +72,7 @@ export function LaunchNxIntro() {
             rel="noreferrer"
             target="_blank"
             href="https://youtu.be/fy0K2Smyj5A"
-            className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-sky-500"
+            className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-blue-500"
           >
             <span className="group-hover:underline">
               Watch the full conference recording
@@ -93,14 +93,14 @@ export function LaunchNxIntro() {
             </svg>
           </a>
 
-          <div className="mt-5 border-t border-slate-200 dark:border-slate-700">
+          <div className="mt-5 border-t border-zinc-200 dark:border-zinc-700">
             <p className="mb-6 mt-6 sm:text-lg">
               Follow us on{' '}
               <a
                 href="https://twitter.com/nxdevtools"
                 rel="noreferrer"
                 target="_blank"
-                className="text-blue-500 dark:text-sky-500"
+                className="text-blue-500 dark:text-blue-500"
               >
                 X
               </a>
@@ -109,7 +109,7 @@ export function LaunchNxIntro() {
                 href="https://www.linkedin.com/company/nxdevtools"
                 rel="noreferrer"
                 target="_blank"
-                className="text-blue-500 dark:text-sky-500"
+                className="text-blue-500 dark:text-blue-500"
               >
                 Linkedin
               </a>
@@ -118,7 +118,7 @@ export function LaunchNxIntro() {
                 href="https://youtube.com/@nxdevtools"
                 rel="noreferrer"
                 target="_blank"
-                className="text-blue-500 dark:text-sky-500"
+                className="text-blue-500 dark:text-blue-500"
               >
                 Youtube
               </a>{' '}
@@ -127,7 +127,7 @@ export function LaunchNxIntro() {
                 href="https://go.nrwl.io/nx-newsletter"
                 rel="noreferrer"
                 target="_blank"
-                className="text-blue-500 dark:text-sky-500"
+                className="text-blue-500 dark:text-blue-500"
               >
                 subscribe to our news
               </a>{' '}

@@ -47,7 +47,7 @@ export default function AdventOfCode(): JSX.Element {
         <div className="w-full">
           <div
             id="connect-with-us"
-            className="py-18 bg-slate-50 dark:bg-slate-800/40"
+            className="py-18 bg-zinc-50 dark:bg-zinc-800/40"
           >
             <article
               id="advent-of-code"
@@ -70,7 +70,7 @@ export default function AdventOfCode(): JSX.Element {
                   <div className="mt-8 flex gap-4">
                     <ButtonLink
                       href="https://github.com/nrwl/ts-aoc-starter#running-the-puzzles"
-                      variant="primary"
+                      variant="contrast"
                       size="large"
                       title="Use Nx to setup your Advent of Code workspace"
                     >
@@ -85,7 +85,7 @@ export default function AdventOfCode(): JSX.Element {
                     >
                       <button
                         title="Use Nx to setup your Advent of Code workspace"
-                        className="text-md group relative flex w-full items-center rounded-lg border border-slate-200 bg-white px-6 py-3 font-semibold leading-6 transition hover:bg-slate-100 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
+                        className="text-md group relative flex w-full items-center rounded-lg border border-zinc-200 bg-white px-6 py-3 font-semibold leading-6 transition hover:bg-zinc-100 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white sm:w-auto dark:border-zinc-700 dark:bg-zinc-800 dark:text-white dark:hover:bg-zinc-700"
                       >
                         <span className="absolute right-1 top-1 flex opacity-0 transition-opacity group-hover:opacity-100">
                           {copied ? (
@@ -96,7 +96,7 @@ export default function AdventOfCode(): JSX.Element {
                         </span>
                         <ChevronRightIcon
                           aria-hidden="true"
-                          className="font-input-mono mr-2 h-5 w-5 text-blue-500 dark:text-sky-500"
+                          className="font-input-mono mr-2 h-5 w-5 text-blue-500 dark:text-blue-500"
                         />
                         npx create-ts-aoc-starter
                       </button>
@@ -119,14 +119,14 @@ export default function AdventOfCode(): JSX.Element {
             </article>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-800/40">
+          <div className="bg-zinc-50 dark:bg-zinc-800/40">
             {/* <div className="max-w-screen-lg mx-auto"> */}
             <div className="mx-auto max-w-7xl">
               <article className="mx-auto px-4 sm:px-6 lg:items-center lg:px-8">
                 <main className="grid grid-cols-1 gap-5 pb-24 pt-10 md:grid-cols-3">
-                  <div className="group relative rounded-lg border border-slate-200 bg-white/60 p-5 transition duration-200 ease-out hover:border-slate-300 dark:border-slate-800/40 dark:bg-slate-800/60 dark:hover:border-slate-900 dark:hover:bg-slate-800">
+                  <div className="group relative rounded-lg border border-zinc-200 bg-white/60 p-5 transition duration-200 ease-out hover:border-zinc-300 dark:border-zinc-800/40 dark:bg-zinc-800/60 dark:hover:border-zinc-900 dark:hover:bg-zinc-800">
                     <div className="relative m-2 mb-6 inline-flex h-10 w-10 items-center justify-center">
-                      <div className="absolute inset-0 -m-2 rotate-6 transform rounded-3xl bg-slate-300 transition duration-200 ease-out group-hover:-rotate-3 group-hover:scale-105 dark:bg-slate-800" />
+                      <div className="absolute inset-0 -m-2 rotate-6 transform rounded-3xl bg-zinc-300 transition duration-200 ease-out group-hover:-rotate-3 group-hover:scale-105 dark:bg-zinc-800" />
                       <div className="absolute inset-0 -rotate-6 transform rounded-2xl bg-[#000000] bg-opacity-75 shadow-inner transition duration-200 ease-out group-hover:rotate-2 group-hover:scale-105" />
                       <img
                         src="https://adventofcode.com/favicon.png"
@@ -154,7 +154,7 @@ export default function AdventOfCode(): JSX.Element {
                       </p>
                     </a>
                   </div>
-                  <div className="group relative rounded-lg border border-slate-200 bg-white/60 p-5 transition duration-200 ease-out hover:border-indigo-300 dark:border-slate-800/40 dark:bg-slate-800/60 dark:hover:border-indigo-900 dark:hover:bg-slate-800">
+                  <div className="group relative rounded-lg border border-zinc-200 bg-white/60 p-5 transition duration-200 ease-out hover:border-indigo-300 dark:border-zinc-800/40 dark:bg-zinc-800/60 dark:hover:border-indigo-900 dark:hover:bg-zinc-800">
                     <div className="relative m-2 mb-6 inline-flex h-10 w-10 items-center justify-center">
                       <div className="absolute inset-0 -m-2 rotate-6 transform rounded-3xl bg-indigo-300 transition duration-200 ease-out group-hover:-rotate-3 group-hover:scale-105 dark:bg-indigo-900" />
                       <div className="absolute inset-0 -rotate-6 transform rounded-2xl bg-[#5865F2] bg-opacity-75 shadow-inner transition duration-200 ease-out group-hover:rotate-2 group-hover:scale-105" />
@@ -184,9 +184,9 @@ export default function AdventOfCode(): JSX.Element {
                       </p>
                     </a>
                   </div>
-                  <div className="group relative rounded-lg border border-slate-200 bg-white/60 p-5 transition duration-200 ease-out hover:border-slate-300 dark:border-slate-800/40 dark:bg-slate-800/60 dark:hover:border-slate-900 dark:hover:bg-slate-800">
+                  <div className="group relative rounded-lg border border-zinc-200 bg-white/60 p-5 transition duration-200 ease-out hover:border-zinc-300 dark:border-zinc-800/40 dark:bg-zinc-800/60 dark:hover:border-zinc-900 dark:hover:bg-zinc-800">
                     <div className="relative m-2 mb-6 inline-flex h-10 w-10 items-center justify-center">
-                      <div className="absolute inset-0 -m-2 rotate-6 transform rounded-3xl bg-slate-300 transition duration-200 ease-out group-hover:-rotate-3 group-hover:scale-105 dark:bg-slate-800" />
+                      <div className="absolute inset-0 -m-2 rotate-6 transform rounded-3xl bg-zinc-300 transition duration-200 ease-out group-hover:-rotate-3 group-hover:scale-105 dark:bg-zinc-800" />
                       <div className="absolute inset-0 -rotate-6 transform rounded-2xl bg-[#000000] bg-opacity-75 shadow-inner transition duration-200 ease-out group-hover:rotate-2 group-hover:scale-105" />
                       <svg
                         fill="currentColor"

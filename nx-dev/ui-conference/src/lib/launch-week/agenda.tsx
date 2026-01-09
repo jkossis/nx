@@ -69,10 +69,10 @@ export function LaunchWeekAgenda(): JSX.Element {
   ];
 
   return (
-    <div className="border-t border-slate-200 dark:border-slate-700">
-      <section className="w-full divide-y divide-slate-200 border-b border-t border-slate-200 dark:divide-slate-700 dark:border-slate-700">
+    <div className="border-t border-zinc-200 dark:border-zinc-700">
+      <section className="w-full divide-y divide-zinc-200 border-b border-t border-zinc-200 dark:divide-zinc-700 dark:border-zinc-700">
         <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-          <article className="md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+          <article className="md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
             <div className="px-5 py-12 md:pr-12">
               <p className="mb-4">
                 Nx Launch Conf is a free, online, half-day event taking a deeper
@@ -82,7 +82,7 @@ export function LaunchWeekAgenda(): JSX.Element {
                 rel="noreferrer"
                 target="_blank"
                 href="https://youtu.be/fy0K2Smyj5A"
-                className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-sky-500"
+                className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-blue-500"
               >
                 <span className="group-hover:underline">
                   Watch the conference recording
@@ -107,7 +107,7 @@ export function LaunchWeekAgenda(): JSX.Element {
         </div>
         <div className="w-full">
           <div className="mx-auto max-w-screen-lg px-5 py-12 md:pr-12 xl:max-w-screen-xl">
-            <span className="rounded-md bg-slate-100 p-2 dark:bg-slate-800">
+            <span className="rounded-md bg-zinc-100 p-2 dark:bg-zinc-800">
               Thursday, February 8th
             </span>
             <p className="mt-4">
@@ -125,7 +125,7 @@ export function LaunchWeekAgenda(): JSX.Element {
 const launchWeekScheduleRow = (item: ScheduleItem): JSX.Element => (
   <div key={item.title + item.time} className="w-full">
     <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-      <article className="grid w-full grid-cols-1 md:grid-cols-5 md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+      <article className="grid w-full grid-cols-1 md:grid-cols-5 md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
         <div className="font-input-mono flex items-center px-5 py-6">
           <span className="hidden md:block">{item.time}</span>
           <span className="mb-4 rounded-md px-6 py-4 md:hidden">

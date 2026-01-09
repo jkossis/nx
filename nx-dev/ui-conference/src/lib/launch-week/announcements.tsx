@@ -2,8 +2,8 @@ import { ButtonLink, SectionHeading } from '@nx/nx-dev-ui-common';
 
 export function LaunchWeekAnnouncements(): JSX.Element {
   return (
-    <div className="border-y border-slate-200 dark:border-slate-700">
-      <section className="w-full divide-y divide-slate-200 dark:divide-slate-700">
+    <div className="border-y border-zinc-200 dark:border-zinc-700">
+      <section className="w-full divide-y divide-zinc-200 dark:divide-zinc-700">
         <article className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
           <div className="px-5 py-12 md:pr-12">
             <p>
@@ -28,7 +28,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                   </SectionHeading>
                 </header>
                 <div className="mt-8 flex gap-16 font-normal">
-                  <p className="max-w-xl text-lg text-slate-700 dark:text-slate-400">
+                  <p className="max-w-xl text-lg text-zinc-700 dark:text-zinc-400">
                     When working on the next iteration of Nx, one idea
                     consistently emerged: Nx Plugins are powerful and have
                     proven to help large enterprises adopt monorepos,
@@ -43,7 +43,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                 </div>
                 <div className="action flex flex-col space-y-2 pt-4 sm:flex-row sm:space-x-2 sm:space-y-0">
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://nx.dev/blog/what-if-nx-plugins-were-more-like-vscode-extensions"
                     title="Unveiling Project Crystal"
@@ -51,7 +51,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Read the blog post
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://youtu.be/wADNsVItnsM"
                     title="Nx - Project Crystal - Youtube Video"
@@ -59,7 +59,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Watch the video
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://www.producthunt.com/posts/nx-crystal"
                     title="Nx Project Crystal on ProductHunt"
@@ -96,7 +96,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                   </SectionHeading>
                 </header>
                 <div className="mt-8 flex gap-16 font-normal">
-                  <p className="max-w-xl text-lg text-slate-700 dark:text-slate-400">
+                  <p className="max-w-xl text-lg text-zinc-700 dark:text-zinc-400">
                     Checkout the newest Nx Plugin: @nx/nuxt. We're excited to
                     collaborate closer with the Vue community, and have been
                     looking forward to launching this plugin since we first
@@ -112,7 +112,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                 </div>
                 <div className="action flex flex-col space-y-2 pt-4 sm:flex-row sm:space-x-2 sm:space-y-0">
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://nx.dev/blog/introducing-nx-nuxt-enhanced-nuxt-js-support-in-nx"
                     title="Introducing @nx/nuxt: Enhanced Nuxt.js Support in Nx"
@@ -120,7 +120,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Read the blog post
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://www.youtube.com/watch?v=1L-bDvEemoc&ab_channel=Nx-SmartMonorepos-FastCI"
                     title="NEW Nx Plugin: @nx/nuxt - Youtube Video"
@@ -128,7 +128,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Watch the video
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://www.youtube.com/watch?v=uHwUxFYX2DY&ab_channel=Nx-SmartMonorepos-FastCI"
                     title="Nx Live: @nx/nuxt w/ Nuxt Maintainer: Daniel Roe - Youtube Livestream"
@@ -165,7 +165,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                   </SectionHeading>
                 </header>
                 <div className="mt-8 flex gap-16 font-normal">
-                  <p className="max-w-xl text-lg text-slate-700 dark:text-slate-400">
+                  <p className="max-w-xl text-lg text-zinc-700 dark:text-zinc-400">
                     Continuous Integration is broken, so we built Nx Agents to
                     fix it. Nx Agents is a new way to run your CI/CD pipelines.
                     It's a distributed and scalable solution built to handle
@@ -177,7 +177,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                 </div>
                 <div className="action flex flex-col space-y-2 pt-4 sm:flex-row sm:space-x-2 sm:space-y-0">
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://nx.dev/blog/fast-effortless-ci"
                     title="Fast, Effortless CI"
@@ -185,7 +185,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Read the blog post
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://youtu.be/_FSHQIwITic"
                     title="Continuous Integration is BROKEN. So We Fixed It! - Youtube Video"
@@ -193,7 +193,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Watch the video
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://www.producthunt.com/posts/nx-agents"
                     title="Nx Agents on ProductHunt"
@@ -230,7 +230,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                   </SectionHeading>
                 </header>
                 <div className="mt-8 flex gap-16 font-normal">
-                  <p className="max-w-xl text-lg text-slate-700 dark:text-slate-400">
+                  <p className="max-w-xl text-lg text-zinc-700 dark:text-zinc-400">
                     Announcing Tusky: A powerful Artificial Intelligence
                     equipped with context of your workspace, commit history, and
                     historical build timing data. Tusky can uniquely understand
@@ -239,7 +239,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                 </div>
                 <div className="action flex flex-col space-y-2 pt-4 sm:flex-row sm:space-x-2 sm:space-y-0">
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://youtu.be/Xfvv09wSoM8"
                     title="Tusky - Youtube Video"
@@ -247,7 +247,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Watch the video
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://nx.app"
                     title="Nx Cloud"
@@ -284,7 +284,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                   </SectionHeading>
                 </header>
                 <div className="mt-8 flex gap-16 font-normal">
-                  <p className="max-w-xl text-lg text-slate-700 dark:text-slate-400">
+                  <p className="max-w-xl text-lg text-zinc-700 dark:text-zinc-400">
                     Last day of launch week! Releasing packages in a monorepo
                     can be tricky and many of today's tools are either outdated
                     or need further tweaking when used in a monorepo. We decided
@@ -297,7 +297,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                 </div>
                 <div className="action flex flex-col space-y-2 pt-4 sm:flex-row sm:space-x-2 sm:space-y-0">
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://nx.dev/blog/versioning-and-releasing-packages-in-a-monorepo"
                     title="Blog post - Versioning and Releasing Packages in a Monorepo"
@@ -305,7 +305,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Read the blog post
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://www.youtube.com/watch?v=KjZKFGu3_9I"
                     title="Releasing Nx Release"
@@ -313,7 +313,7 @@ export function LaunchWeekAnnouncements(): JSX.Element {
                     Watch the talk
                   </ButtonLink>
                   <ButtonLink
-                    variant="primary"
+                    variant="contrast"
                     size="default"
                     href="https://www.youtube.com/live/xjLrFvEcxZw?si=L8Cfk41yKvYb1rud"
                     title="Nx Live Stream - Launch Week Wrap Up and Q&A"

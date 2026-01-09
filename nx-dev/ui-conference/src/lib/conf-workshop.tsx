@@ -1,10 +1,10 @@
 export function ConfWorkshop(): JSX.Element {
   return (
-    <div className="border-b border-t border-slate-200 dark:border-slate-700">
+    <div className="border-b border-t border-zinc-200 dark:border-zinc-700">
       <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-        <article className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+        <article className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
           <div className="px-5 py-12 md:pr-12">
-            <div className="font-input-mono text-slate-700 dark:text-slate-300">
+            <div className="font-input-mono text-zinc-700 dark:text-zinc-300">
               Day 1 - Sunday, Oct. 16 | Day 2 - Tuesday, Oct. 18
             </div>
             <h2 className="font-input-mono pb-2 pt-8 text-2xl">
@@ -103,7 +103,7 @@ export function ConfWorkshop(): JSX.Element {
               set up your example workspace.
             </p>
           </div>
-          <div className="divide-y divide-slate-200 py-12 dark:divide-slate-700">
+          <div className="divide-y divide-zinc-200 py-12 dark:divide-zinc-700">
             {/*<div className="px-5 pb-12 md:w-4/5 md:pl-12">
               <h3 className="font-input-mono mb-8 text-xl">Instructors</h3>
               <MemberCard
@@ -126,7 +126,7 @@ export function ConfWorkshop(): JSX.Element {
               <h3 className="font-input-mono mb-8 text-xl">
                 What you'll learn
               </h3>
-              <p className="text-slate-300">
+              <p className="text-zinc-300">
                 We’ll build up a monorepo from scratch, creating a client app
                 and server app that share an API type library. We’ll learn how
                 Nx uses builder commands and schemeatics to make the developer
@@ -145,14 +145,14 @@ export function ConfWorkshop(): JSX.Element {
                   <path d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.596-5.242L23.32 3.984 11.999.001zm7.064 18.31h-2.638l-1.422-3.503H8.996l-1.422 3.504h-2.64L12 2.65z" />
                 </svg>
               </div>
-              <p className="text-slate-300">
+              <p className="text-zinc-300">
                 All codelabs are available in either React or Angular, but the
                 concepts are the same.
               </p>
             </div>*/}
             <div className="px-5 py-12 md:pl-12">
               <a
-                className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-sky-500"
+                className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-blue-500"
                 href="https://ti.to/nx-conf/nx-conf-2022?utm_source=nxdev"
               >
                 <span className="group-hover:underline">Save your ticket!</span>

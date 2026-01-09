@@ -1,8 +1,8 @@
 export function CodeOfConduct(): JSX.Element {
   return (
-    <div className="border-b border-t border-slate-200 dark:border-slate-700">
+    <div className="border-b border-t border-zinc-200 dark:border-zinc-700">
       <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-        <article className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+        <article className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
           <div className="px-5 py-12 md:pr-12">
             <p className="mb-4">
               Nx is dedicated to providing a harassment-free conference
@@ -24,10 +24,10 @@ export function CodeOfConduct(): JSX.Element {
             </p>
           </div>
 
-          <div className="divide-y divide-slate-200 py-12 dark:divide-slate-700">
+          <div className="divide-y divide-zinc-200 py-12 dark:divide-zinc-700">
             <div className="px-5 py-12 md:pl-12">
               <a
-                className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-sky-500"
+                className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-blue-500"
                 href="https://docs.google.com/document/d/1biFWD08Wrd99gRZNv4Q1tawEYGZEI3bd3J55E5uG2ZU/edit?usp=sharing"
               >
                 <span className="group-hover:underline">

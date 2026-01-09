@@ -57,7 +57,7 @@ export function LaunchNxCommunityPartners(): JSX.Element {
   ];
 
   return (
-    <div className="border-t border-slate-200 dark:border-slate-700">
+    <div className="border-t border-zinc-200 dark:border-zinc-700">
       <div className="mx-auto max-w-7xl py-6">
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-1 items-center gap-8 px-6 sm:max-w-xl md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {partners.map((partner) => (

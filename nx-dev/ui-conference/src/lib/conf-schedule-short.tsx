@@ -174,19 +174,19 @@ export function ConfScheduleShort(): JSX.Element {
   ];
 
   return (
-    <div className="border-t border-slate-200 dark:border-slate-700">
+    <div className="border-t border-zinc-200 dark:border-zinc-700">
       <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-        <div className="date-container-l font-input-mono mt-16 grid grid-cols-1 divide-x divide-slate-200 dark:divide-slate-700">
+        <div className="date-container-l font-input-mono mt-16 grid grid-cols-1 divide-x divide-zinc-200 dark:divide-zinc-700">
           <div className="p-8 text-center">
-            <span className="rounded-md bg-slate-100 p-2 dark:bg-slate-800">
+            <span className="rounded-md bg-zinc-100 p-2 dark:bg-zinc-800">
               Tuesday, September 26th
             </span>
           </div>
         </div>
       </div>
-      <section className="w-full divide-y divide-slate-200 border-b border-t border-slate-200 dark:divide-slate-700 dark:border-slate-700">
+      <section className="w-full divide-y divide-zinc-200 border-b border-t border-zinc-200 dark:divide-zinc-700 dark:border-zinc-700">
         <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-          <article className="md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+          <article className="md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
             <div className="px-5 py-12 md:pr-12">
               <p className="mb-4">
                 Main conference day with speakers from the Nx core team and

@@ -1,8 +1,8 @@
 export function ConfLocation(): JSX.Element {
   return (
-    <div className="border-b border-t border-slate-200 dark:border-slate-700">
+    <div className="border-b border-t border-zinc-200 dark:border-zinc-700">
       <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-        <article className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+        <article className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
           <div className="px-5 py-12 md:pr-12">
             <p className="mb-8">
               Nx Conf 2023 is taking place in New York at the Sheraton Times
@@ -16,7 +16,7 @@ export function ConfLocation(): JSX.Element {
               className="h-96 w-full rounded-lg shadow"
             ></iframe>
           </div>
-          <div className="divide-y divide-slate-200 py-12 dark:divide-slate-700"></div>
+          <div className="divide-y divide-zinc-200 py-12 dark:divide-zinc-700"></div>
         </article>
       </div>
     </div>

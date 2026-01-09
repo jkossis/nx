@@ -10,7 +10,7 @@ export interface ScheduleItem {
 export const scheduleRow = (item: ScheduleItem): JSX.Element => (
   <div key={item.title + item.time} className="w-full">
     <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-      <article className="grid w-full grid-cols-1 md:grid-cols-5 md:divide-x md:divide-slate-200 md:dark:divide-slate-700">
+      <article className="grid w-full grid-cols-1 md:grid-cols-5 md:divide-x md:divide-zinc-200 md:dark:divide-zinc-700">
         <div className="font-input-mono px-5 pb-8 pt-12 md:py-12">
           <span className="hidden md:block">{item.time}</span>
           <span className="mb-4 rounded-md px-6 py-4 md:hidden">
@@ -46,7 +46,7 @@ export const breakRow = (item: ScheduleItem): JSX.Element => (
             {item.time}
           </span>
         </div>
-        <div className="px-5 pb-12 md:col-span-4 md:border-l md:border-slate-200 md:px-8 md:py-12 md:dark:border-slate-700">
+        <div className="px-5 pb-12 md:col-span-4 md:border-l md:border-zinc-200 md:px-8 md:py-12 md:dark:border-zinc-700">
           {item.videoUrl ? (
             <h3 className="font-input-mono underline">
               <a href={item.videoUrl} target="_blank" rel="noreferrer">

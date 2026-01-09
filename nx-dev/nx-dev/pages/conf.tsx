@@ -37,7 +37,7 @@ export default function ConfPage(): JSX.Element {
       <Header />
       <main id="main" role="main">
         <div
-          className="w-full overflow-hidden bg-slate-50 dark:bg-slate-800/40"
+          className="w-full overflow-hidden bg-zinc-50 dark:bg-zinc-800/40"
           style={{
             background:
               "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Crect width='2' height='2' fill='rgb(59,130,246)' fill-opacity='0.15'/%3E%3C/svg%3E\")",
@@ -75,7 +75,7 @@ export default function ConfPage(): JSX.Element {
               </div>
               <div className="mt-8 flex w-full flex-col pb-10 lg:mt-0 lg:w-3/5 lg:pb-0 lg:pl-16">
                 <h2>
-                  <div className="font-input-mono mb-4 inline-block rounded-lg border border-slate-200 bg-white/40 p-4 px-6 py-4 text-sm text-xl font-extrabold leading-none tracking-tight shadow-sm transition hover:bg-white sm:text-2xl lg:text-2xl dark:border-slate-800/40 dark:bg-slate-800/60 dark:hover:bg-slate-800">
+                  <div className="font-input-mono mb-4 inline-block rounded-lg border border-zinc-200 bg-white/40 p-4 px-6 py-4 text-sm text-xl font-extrabold leading-none tracking-tight shadow-sm transition hover:bg-white sm:text-2xl lg:text-2xl dark:border-zinc-800/40 dark:bg-zinc-800/60 dark:hover:bg-zinc-800">
                     <span className="sr-only">Announcing Nx Conf on </span>{' '}
                     September 26, 2023
                   </div>
@@ -101,7 +101,7 @@ export default function ConfPage(): JSX.Element {
                   more scalable, and more collaborative.
                 </p>
                 {/* <h2 className="my-6">
-                  <div className="font-input-mono mb-4 inline-block rounded-lg border border-slate-200 bg-white/40 p-4 py-4 px-6 text-xl text-sm font-extrabold leading-none tracking-tight shadow-sm transition hover:bg-white dark:border-slate-800/40 dark:bg-slate-800/60 dark:hover:bg-slate-800 sm:text-2xl lg:text-2xl">
+                  <div className="font-input-mono mb-4 inline-block rounded-lg border border-zinc-200 bg-white/40 p-4 py-4 px-6 text-xl text-sm font-extrabold leading-none tracking-tight shadow-sm transition hover:bg-white dark:border-zinc-800/40 dark:bg-zinc-800/60 dark:hover:bg-zinc-800 sm:text-2xl lg:text-2xl">
                     <span className="sr-only">Announcing Nx Conf on </span>{' '}
                     Summit - September 27, 2023
                   </div>
@@ -119,14 +119,14 @@ export default function ConfPage(): JSX.Element {
                   monorepos and making development faster, more scalable and
                   collaborative.
                 </p> */}
-                <div className="border-t border-slate-200 dark:border-slate-700">
+                <div className="border-t border-zinc-200 dark:border-zinc-700">
                   <p className="mb-6 mt-6 sm:text-lg">
                     Follow us on{' '}
                     <a
                       href="https://twitter.com/nxdevtools"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-blue-500 dark:text-sky-500"
+                      className="text-blue-500 dark:text-blue-500"
                     >
                       Twitter
                     </a>
@@ -135,7 +135,7 @@ export default function ConfPage(): JSX.Element {
                       href="https://www.linkedin.com/company/nxdevtools"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-blue-500 dark:text-sky-500"
+                      className="text-blue-500 dark:text-blue-500"
                     >
                       Linkedin
                     </a>{' '}
@@ -144,7 +144,7 @@ export default function ConfPage(): JSX.Element {
                       href="https://go.nrwl.io/nx-newsletter"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-blue-500 dark:text-sky-500"
+                      className="text-blue-500 dark:text-blue-500"
                     >
                       subscribe to our news
                     </a>{' '}
@@ -153,7 +153,7 @@ export default function ConfPage(): JSX.Element {
                 </div>
 
                 {/* <a
-                  className="font-input-mono group flex w-full items-center text-blue-500 dark:text-sky-500 sm:text-xl"
+                  className="font-input-mono group flex w-full items-center text-blue-500 dark:text-blue-500 sm:text-xl"
                   href="https://ti.to/nx-conf/nx-conf-2022?utm_source=nxdev"
                 >
                   <span className="group-hover:underline">Register now</span>
@@ -177,7 +177,7 @@ export default function ConfPage(): JSX.Element {
                   rel="noreferrer"
                   target="_blank"
                   href="https://www.youtube.com/live/IQ5YyEYZw68"
-                  className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-sky-500"
+                  className="font-input-mono group flex w-full items-center text-blue-500 sm:text-xl dark:text-blue-500"
                 >
                   <span className="group-hover:underline">
                     Watch the live stream recording
@@ -201,7 +201,7 @@ export default function ConfPage(): JSX.Element {
                   rel="noreferrer"
                   target="_blank"
                   href="https://www.youtube.com/watch?v=-g3NABhePJg&utm_source=nx.dev"
-                  className="font-input-mono group flex w-full items-center text-blue-500 dark:text-sky-500 sm:text-md"
+                  className="font-input-mono group flex w-full items-center text-blue-500 dark:text-blue-500 sm:text-md"
                 >
                   <span className="group-hover:underline">
                     Watch last year's live replay
@@ -227,9 +227,9 @@ export default function ConfPage(): JSX.Element {
         </div>
         <div className="w-full overflow-hidden">
           {/*NAVIGATION*/}
-          <div className="hidden border-b border-t border-slate-200 md:block dark:border-slate-700">
+          <div className="hidden border-b border-t border-zinc-200 md:block dark:border-zinc-700">
             <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-              <div className="font-input-mono grid-cols-7 items-center divide-x divide-slate-200 text-center md:grid dark:divide-slate-700">
+              <div className="font-input-mono grid-cols-7 items-center divide-x divide-zinc-200 text-center md:grid dark:divide-zinc-700">
                 <div className="p-8">
                   <svg
                     id="nx-conf-logo"
@@ -253,31 +253,31 @@ export default function ConfPage(): JSX.Element {
                 </div>
                 <Link
                   href="#agenda"
-                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
                 >
                   Agenda
                 </Link>
                 <Link
                   href="#speakers"
-                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
                 >
                   Speakers
                 </Link>
                 {/* <Link
                   href="#workshop"
-                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
                 >
                   Workshop
                 </Link> */}
                 <Link
                   href="#location"
-                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
                 >
                   Location
                 </Link>
                 <Link
                   href="#code-of-conduct"
-                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                  className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
                 >
                   CoC
                 </Link>

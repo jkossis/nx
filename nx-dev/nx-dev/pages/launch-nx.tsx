@@ -39,7 +39,7 @@ export default function ConfPage(): JSX.Element {
       />
       <main id="main" role="main">
         <div
-          className="w-full overflow-hidden bg-slate-50 dark:bg-slate-800/40"
+          className="w-full overflow-hidden bg-zinc-50 dark:bg-zinc-800/40"
           style={{
             background:
               "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Crect width='2' height='2' fill='rgb(59,130,246)' fill-opacity='0.15'/%3E%3C/svg%3E\")",
@@ -48,9 +48,9 @@ export default function ConfPage(): JSX.Element {
         <Header />
         <LaunchNxIntro />
         {/*NAVIGATION*/}
-        <div className="hidden border-b border-t border-slate-200 md:block dark:border-slate-700">
+        <div className="hidden border-b border-t border-zinc-200 md:block dark:border-zinc-700">
           <div className="mx-auto max-w-screen-lg xl:max-w-screen-xl">
-            <div className="font-input-mono grid-cols-5 items-center divide-x divide-slate-200 text-center md:grid dark:divide-slate-700">
+            <div className="font-input-mono grid-cols-5 items-center divide-x divide-zinc-200 text-center md:grid dark:divide-zinc-700">
               <div className="p-6">
                 <svg
                   className="inline-block dark:text-white"
@@ -67,25 +67,25 @@ export default function ConfPage(): JSX.Element {
               </div>
               <Link
                 href="#announcements"
-                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
               >
                 Announcements
               </Link>
               <Link
                 href="#conf"
-                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
               >
                 Launch Conf
               </Link>
               <Link
                 href="#community-partners"
-                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
               >
                 Community Partners
               </Link>
               <Link
                 href="#code-of-conduct"
-                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-slate-800/60 dark:hover:bg-slate-800"
+                className="cursor-pointer bg-white/40 py-8 transition hover:bg-white dark:bg-zinc-800/60 dark:hover:bg-zinc-800"
               >
                 Code of Conduct
               </Link>
