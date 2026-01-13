@@ -18,7 +18,7 @@ performance.mark(`plugin worker ${process.pid} code loading -- end`);
 performance.measure(
   `plugin worker ${process.pid} code loading`,
   `plugin worker ${process.pid} code loading -- start`,
-  `plugin worker ${process.pid} code loading -- end`
+  `plugin worker ${process.pid} code loading -- end`,
 );
 
 global.NX_GRAPH_CREATION = true;
@@ -35,7 +35,7 @@ const server = createServer((socket) => {
   // instructed to load the plugin.
   const loadTimeout = setTimeout(() => {
     console.error(
-      `Plugin Worker exited because no plugin was loaded within 10 seconds of starting up.`
+      `Plugin Worker exited because no plugin was loaded within 10 seconds of starting up.`,
     );
     process.exit(1);
   }, 10000).unref();
@@ -48,18 +48,18 @@ const server = createServer((socket) => {
       }
       return consumeMessage(socket, message, {
         load: async ({
-          plugin: pluginConfiguration,
-          root,
-          name,
-          pluginPath,
-          shouldRegisterTSTranspiler,
-        }) => {
+                       plugin: pluginConfiguration,
+                       root,
+                       name,
+                       pluginPath,
+                       shouldRegisterTSTranspiler,
+                     }) => {
           if (loadTimeout) clearTimeout(loadTimeout);
           process.chdir(root);
           try {
             const { loadResolvedNxPluginAsync } = await import(
-              '../load-resolved-plugin'
-            );
+              '../load-resolved-plugin.js'
+              );
 
             // Register the ts-transpiler if we are pointing to a
             // plain ts file that's not part of a plugin project
@@ -71,7 +71,7 @@ const server = createServer((socket) => {
             plugin = await loadResolvedNxPluginAsync(
               pluginConfiguration,
               pluginPath,
-              name
+              name,
             );
             return {
               type: 'load-result',
@@ -195,7 +195,7 @@ const server = createServer((socket) => {
           }
         },
       });
-    })
+    }),
   );
 
   // There should only ever be one host -> worker connection
@@ -209,7 +209,8 @@ const server = createServer((socket) => {
     server.close(() => {
       try {
         unlinkSync(socketPath);
-      } catch (e) {}
+      } catch (e) {
+      }
       process.exit(0);
     });
   });
@@ -221,7 +222,7 @@ if (process.env.NX_PLUGIN_NO_TIMEOUTS !== 'true') {
   setTimeout(() => {
     if (!connected) {
       console.error(
-        'The plugin worker is exiting as it was not connected to within 5 seconds.'
+        'The plugin worker is exiting as it was not connected to within 5 seconds.',
       );
       process.exit(1);
     }
@@ -232,7 +233,8 @@ const exitHandler = (exitCode: number) => () => {
   server.close();
   try {
     unlinkSync(socketPath);
-  } catch (e) {}
+  } catch (e) {
+  }
   process.exit(exitCode);
 };
 
