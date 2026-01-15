@@ -9,6 +9,21 @@ import { sidebar } from './sidebar.mts';
 
 const BASE = '/docs';
 
+/**
+ * Astro integration that restarts the dev server when sidebar.mts changes.
+ * Uses Astro's built-in addWatchFile API for config file dependencies.
+ */
+function watchSidebar() {
+  return {
+    name: 'watch-sidebar',
+    hooks: {
+      'astro:config:setup': ({ addWatchFile, config }) => {
+        addWatchFile(new URL('./sidebar.mts', config.root));
+      },
+    },
+  };
+}
+
 // This is exposed as window.__CONFIG
 const PUBLIC_CONFIG = {
   cookiebotDisabled: process.env.COOKIEBOT_DISABLED === 'true',
@@ -37,6 +52,7 @@ export default defineConfig({
   // This adapter doesn't support local previews, so only load it on Netlify.
   adapter: process.env['NETLIFY'] ? netlify() : undefined,
   integrations: [
+    watchSidebar(),
     markdoc(),
     // https://starlight.astro.build/reference/configuration/
     starlight({
@@ -87,7 +103,7 @@ export default defineConfig({
         // since the sidebar doesn't auto generate w/ dynamic routes from src/pages/reference
         // only the src/content/docs/reference files
         './src/plugins/sidebar-reference-updater.middleware.ts',
-        './src/plugins/sidebar-icons.middleware.ts',
+        //        './src/plugins/sidebar-icons.middleware.ts',
         './src/plugins/og.middleware.ts',
         './src/plugins/github-stars.middleware.ts',
         './src/plugins/raw-content.middleware.ts',

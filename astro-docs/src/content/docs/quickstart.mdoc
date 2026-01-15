@@ -1,6 +1,6 @@
 ---
 title: Quickstart with Nx
-description: Get up and running with Nx in minutes - install Nx, set up your editor, configure AI assistance, and choose your development path.
+description: Get from zero to running with Nx in minutes. Install (or just use npx), create a workspace, and run your first cached task.
 tableOfContents: false
 filter: 'type:Guides'
 ---
@@ -9,9 +9,42 @@ Get up and running with Nx in just a few minutes by following these simple steps
 
 {% steps %}
 
-1. Install the Nx CLI
+1. **Install Nx (optional)**
 
-   Installing Nx globally is **optional** - you can use `npx` to run Nx commands without installing it globally, especially if you're working with Node.js projects.
+   You can run Nx immediately with your preferred package manager — no installation required:
+
+   {% tabs syncKey="package-manager" %}
+   {% tabitem label="npm" %}
+
+   ```shell
+   npx nx@latest --version
+   ```
+
+   {% /tabitem %}
+   {% tabitem label="pnpm" %}
+
+   ```shell
+   pnpm dlx nx@latest --version
+   ```
+
+   {% /tabitem %}
+   {% tabitem label="yarn" %}
+
+   ```shell
+   yarn dlx nx@latest --version
+   ```
+
+   {% /tabitem %}
+   {% tabitem label="bun" %}
+
+   ```shell
+   bunx nx@latest --version
+   ```
+
+   {% /tabitem %}
+   {% /tabs %}
+
+   For frequent use, install globally:
 
    {% tabs syncKey="install-method" %}
    {% tabitem label="npm" %}
@@ -19,8 +52,6 @@ Get up and running with Nx in just a few minutes by following these simple steps
    ```shell
    npm add --global nx
    ```
-
-   **Note:** You can also use Yarn, pnpm, or Bun
 
    {% /tabitem %}
    {% tabitem label="Homebrew (macOS, Linux)" %}
@@ -48,58 +79,135 @@ Get up and running with Nx in just a few minutes by following these simple steps
    {% /tabitem %}
    {% /tabs %}
 
-2. Start fresh or add to existing project
+2. **Create or initialize a workspace**
 
-   For JavaScript-based projects you can **start with a new workspace** using the following command:
+   {% tabs %}
+   {% tabitem label="New Project" %}
+
+   Create a new Nx workspace with everything configured:
+
+   {% tabs syncKey="package-manager" %}
+   {% tabitem label="npm" %}
 
    ```shell
    npx create-nx-workspace@latest
    ```
 
-   **Add to an existing project: (recommended also for non-JS projects)**
+   {% /tabitem %}
+   {% tabitem label="pnpm" %}
+
+   ```shell
+   pnpm create nx-workspace
+   ```
+
+   {% /tabitem %}
+   {% tabitem label="yarn" %}
+
+   ```shell
+   yarn create nx-workspace
+   ```
+
+   {% /tabitem %}
+   {% tabitem label="bun" %}
+
+   ```shell
+   bunx create-nx-workspace@latest
+   ```
+
+   {% /tabitem %}
+   {% /tabs %}
+
+   Follow the prompts to select your preferred setup and preferences.
+
+   {% /tabitem %}
+   {% tabitem label="Existing Project" %}
+
+   Add Nx to any existing repository (works with any language/stack):
+
+   {% tabs syncKey="package-manager" %}
+   {% tabitem label="npm" %}
 
    ```shell
    npx nx@latest init
    ```
 
-   **Get the complete experience:**
-   For a fully integrated development workflow with AI-powered CI features, [start directly from Nx Cloud](https://cloud.nx.app/get-started).
-
-   Learn more: [Start New Project](/docs/getting-started/start-new-project) • [Add to Existing](/docs/getting-started/start-with-existing-project) • [Complete Nx Experience](https://cloud.nx.app/get-started)
-
-3. Run Your First Commands
-
-   Nx provides powerful task execution with built-in caching. Here are some essential commands:
-
-   **Run a task for a single project:**
+   {% /tabitem %}
+   {% tabitem label="pnpm" %}
 
    ```shell
-   nx build my-app
-   nx test my-lib
+   pnpm dlx nx@latest init
    ```
 
-   **Run tasks for multiple projects:**
+   {% /tabitem %}
+   {% tabitem label="yarn" %}
 
    ```shell
-   nx run-many -t build test lint
+   yarn dlx nx@latest init
+   ```
+
+   {% /tabitem %}
+   {% tabitem label="bun" %}
+
+   ```shell
+   bunx nx@latest init
+   ```
+
+   {% /tabitem %}
+   {% /tabs %}
+
+   This adds minimal config and enables caching immediately.
+
+   {% /tabitem %}
+   {% /tabs %}
+
+   Learn more: [Start New Project](/docs/getting-started/start-new-project) • [Add to Existing](/docs/getting-started/start-with-existing-project)
+
+3. **Run your first task**
+
+   Run any task with automatic caching:
+
+   ```shell
+   nx build my-app      # Build a single project
+   nx test my-lib       # Test a single project
+   nx run-many -t build test lint   # Run multiple tasks across projects
+   ```
+
+   Run it again and watch Nx restore from cache instantly:
+
+   ```shell
+   nx build my-app      # ⚡ Cached - completes in milliseconds
+   ```
+
+   Explore your workspace with the project graph:
+
+   ```shell
+   nx graph
    ```
 
    Learn more: [Run Tasks](/docs/features/run-tasks) • [Cache Task Results](/docs/features/cache-task-results)
 
-4. What's next?
-
-   Now that you've experienced the Nx basics, choose how you want to continue:
-
-   {% cardgrid %}
-
-   {% linkcard title="I learn by doing" description="Follow our guided tutorials that teach you from setting up a new project to configuring continuous integration." href="/docs/getting-started/tutorials" /%}
-
-   {% linkcard title="I learn better with videos" description="Check out our bite-sized video lessons that teach you about Nx 101, Nx Release and how to incrementally adopt Nx in an existing project."  href="https://nx.dev/courses" /%}
-
-   {% linkcard title="Tell me more about Nx on CI" description="Understand how Nx works on CI, how to configure it and how Nx Cloud helps ensure CI runs fast and efficiently."  href="/docs/getting-started/nx-cloud" /%}
-
-   {% linkcard title="Is Nx just for JavaScript projects?" description="Explore Nx's technology integrations and how it can support your specific stack. Even beyond just JavaScript-based projects."  href="/docs/technologies"  /%}
-
-   {% /cardgrid %}
-
 {% /steps %}
+
+## What's next?
+
+Now that you've experienced the Nx basics, choose how you want to continue:
+
+{% cardgrid %}
+
+{% linkcard title="I learn by doing" description="Follow our guided tutorials that teach you from setting up a new project to configuring continuous integration." href="/docs/getting-started/tutorials" /%}
+
+{% linkcard title="I learn better with videos" description="Check out our bite-sized video lessons that teach you about Nx 101, Nx Release and how to incrementally adopt Nx in an existing project."  href="https://nx.dev/courses" /%}
+
+{% linkcard title="Tell me more about Nx on CI" description="Understand how Nx works on CI, how to configure it and how Nx Cloud helps ensure CI runs fast and efficiently."  href="/docs/getting-started/nx-cloud" /%}
+
+{% linkcard title="Is Nx just for JavaScript projects?" description="Explore Nx's technology integrations and how it can support your specific stack. Even beyond just JavaScript-based projects."  href="/docs/technologies"  /%}
+
+{% /cardgrid %}
+
+{% aside type="tip" title="Pro Tips" %}
+
+- **Keep Nx updated:** Run `nx migrate latest` followed by `nx migrate --run-migrations` to get the latest features and [automated dependency updates](/docs/features/automate-updating-dependencies).
+- **Supercharge your CI:** Connect to [Nx Cloud](https://cloud.nx.app/get-started) for remote caching, distributed task execution, and AI-powered CI features — free for small teams.
+- **Get editor support:** Install the [Nx Console extension](/docs/getting-started/editor-setup) for VS Code or JetBrains for an enhanced developer experience.
+
+{% /aside %}
