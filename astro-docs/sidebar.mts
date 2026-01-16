@@ -1,6 +1,8 @@
 import type { StarlightUserConfig } from '@astrojs/starlight/types';
 import { getPluginItems } from './src/plugins/utils/plugin-mappings';
 
+// NOTE: manually build the sidebar instead of autogenerating w/ folder structure
+// while we test different iterations. once we settle on the structure we'll move files and add redirects
 export const sidebar: StarlightUserConfig['sidebar'] = [
   {
     label: 'Getting Started',
@@ -35,7 +37,7 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
   },
   {
     label: 'Nx Essentials',
-    collapsed: false,
+    collapsed: true,
     items: [
       {
         link: 'concepts/mental-model',
@@ -54,7 +56,7 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
         label: 'Running Tasks',
       },
       {
-        link: 'features/code-generation',
+        link: 'features/generate-code',
         label: 'Code Generation',
       },
       {
@@ -69,7 +71,8 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
         label: 'AI Powered Development',
         link: 'features/enhance-ai',
       },
-      // frameworks/technology 1 pagers, more indepth guides should stay in the advanced section
+      // frameworks/technology 1 pagers of most popular technologies?, more indepth guides should stay in the advanced section
+      // TODO: move in the angular compat matris into this file and add a redirect
       {
         link: 'technologies/angular/introduction',
         label: 'Angular',
@@ -86,27 +89,86 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
         link: 'technologies/java/introduction',
         label: 'Java',
       },
+      {
+        // combine with the reference/nodejs-typescript-compatibility docs
+        link: 'reference/releases',
+        label: 'Release Schedule',
+      },
+      {
+        // combine with the reference/nodejs-typescript-compatibility docs
+        link: 'reference/nodejs-typescript-compatibility',
+        label: 'Node.JS and TypeScript Compatibility',
+      },
     ],
   },
   {
     label: 'Advanced Nx',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
-        label: 'Run Only Affected',
+        label: 'Filter Affected Projects',
         link: 'features/ci-features/affected',
       },
       {
-        label: 'Manage Releases',
-        link: 'features/manage-releases',
-      },
-      {
         label: 'Enforce Module Boundaries',
-        link: 'features/enforce-module-boundaries',
+        // TODO: move this feature page to an intro page of the module boundary guides
+        // link: 'features/enforce-module-boundaries',
+        link: 'guides/enforce-module-boundaries',
+      },
+      // TODO: we need a outputs docs I feel or having a inputs & outputs combo doc since outputs are pretty simple
+      {
+        label: 'Target Inputs',
+        link: 'reference/inputs',
       },
       {
-        label: 'Add Nx to Monorepo',
-        link: 'guides/adopting-nx/adding-to-monorepo',
+        label: 'Buildable and Publishable Libraries',
+        link: 'concepts/buildable-and-publishable-libraries',
+      },
+      {
+        label: 'Update Strategies',
+        link: 'guides/tips-n-tricks/advanced-update',
+      },
+      {
+        label: 'Nx Cloud Source Control Integration',
+        link: 'guides/nx-cloud/source-control-integration',
+      },
+      {
+        label: 'Nx Agents',
+        collapsed: true,
+        items: [
+          {
+            label: 'Assignment Rules',
+            link: 'reference/nx-cloud/assignment-rules',
+          },
+          {
+            label: 'Launch Templates',
+            link: 'reference/nx-cloud/launch-templates',
+          },
+          {
+            label: 'Custom Steps',
+            link: 'reference/nx-cloud/custom-steps',
+          },
+          {
+            label: 'Custom Images',
+            link: 'reference/nx-cloud/custom-steps',
+          },
+        ],
+      },
+      {
+        label: 'Nx Release',
+        collapsed: true,
+        autogenerate: { directory: 'guides/Nx Release', collapsed: true },
+      },
+      {
+        label: 'Nx Enterprise',
+        collapsed: true,
+        autogenerate: { directory: 'enterprise', collapsed: true },
+        // TODO: Move conformance & owners information to here
+      },
+      {
+        // more detailed guides about adopting nx seperate from the getting started quickstarts
+        label: 'Adopting Nx',
+        autogenerate: { directory: 'guides/Adopting Nx', collapsed: true },
       },
     ],
   },
@@ -116,9 +178,45 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
     autogenerate: { directory: 'extending-nx', collapsed: true },
   },
   {
-    label: 'Reference',
+    label: 'References',
     collapsed: true,
-    autogenerate: { directory: 'reference', collapsed: true },
+    items: [
+      {
+        label: 'Nx CLI Commands',
+        link: 'reference/nx-commands',
+      },
+      {
+        label: 'Nx Cloud CLI Commands',
+        link: 'reference/nx-cloud-cli',
+      },
+      {
+        label: 'nx.json',
+        link: 'reference/nx-json',
+      },
+      {
+        label: 'Project Configuration',
+        link: 'reference/project-configuration',
+      },
+      {
+        label: 'Nx Console Settings',
+        link: 'reference/nx-console-settings',
+      },
+      {
+        label: 'Nx MCP',
+        link: 'reference/nx-mcp',
+      },
+      {
+        label: 'Environment Variables',
+        link: 'reference/environment-variables',
+      },
+      {
+        label: 'Glossary',
+        link: 'reference/glossary',
+      },
+      { label: 'Deprecations', link: 'reference/deprecations' },
+      { label: 'Remote Cache Plugins', link: 'reference/remote-cache-plugins' },
+    ],
+    // autogenerate: { directory: 'reference', collapsed: true },
   },
   {
     label: 'Troubleshooting',
