@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 Cypress is a test runner built for the modern web. It has a lot of great features:
 
 - Time travel
@@ -342,3 +346,11 @@ nx e2e frontend-e2e --env.API_URL="https://api.my-nx-website.com" --env.API_KEY=
 {% aside type="caution" title="Command-line args vs configuration options" %}
 Providing a flag will override any option with the same name set in the project or workspace configuration.
 {% /aside %}
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Cypress for your projects" href="/docs/technologies/test-tools/cypress/generators" /%}
+{% linkcard title="Executors" description="Run e2e and component tests with Cypress" href="/docs/technologies/test-tools/cypress/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/cypress updates" href="/docs/technologies/test-tools/cypress/migrations" /%}
+{% /cardgrid %}

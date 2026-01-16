@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 When using Next.js in Nx, you get the out-of-the-box support for TypeScript, Cypress, and Jest. No need to configure anything: watch mode, source maps, and typings just work.
 
 The Next.js plugin contains executors and generators for managing Next.js applications and libraries within an Nx workspace. It provides:
@@ -363,3 +367,11 @@ Here are other resources that you may find useful to learn more about Next.js an
 
 - **Blog post:** [Building a blog with Next.js and Nx Series](https://blog.nrwl.io/create-a-next-js-web-app-with-nx-bcf2ab54613) by Juri Strumpflohner
 - **Video tutorial:** [Typescript NX Monorepo with NextJS and Express](https://www.youtube.com/watch?v=WOfL5q2HznI) by Jack Herrington
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Next.js applications, libraries, pages, and components" href="/docs/technologies/react/next/generators" /%}
+{% linkcard title="Executors" description="Run builds, serve, and other tasks for Next.js projects" href="/docs/technologies/react/next/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/next updates" href="/docs/technologies/react/next/migrations" /%}
+{% /cardgrid %}

@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for Rsbuild contains executors and generators that support building applications using Rsbuild.
 
 ## Setting Up @nx/rsbuild
@@ -35,3 +39,11 @@ nx g @nx/react:app myapp --bundler=rsbuild
 ```
 
 This will create a new application configured to use Rsbuild for building.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Rsbuild for your projects" href="/docs/technologies/build-tools/rsbuild/generators" /%}
+{% linkcard title="Executors" description="Build and serve applications using Rsbuild" href="/docs/technologies/build-tools/rsbuild/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/rsbuild updates" href="/docs/technologies/build-tools/rsbuild/migrations" /%}
+{% /cardgrid %}

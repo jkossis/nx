@@ -37,7 +37,7 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
   },
   {
     label: 'Nx Essentials',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         link: 'concepts/mental-model',
@@ -103,7 +103,7 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
   },
   {
     label: 'Advanced Nx',
-    collapsed: false,
+    collapsed: true,
     items: [
       {
         label: 'Filter Affected Projects',

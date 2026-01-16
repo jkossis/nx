@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 {% aside type="caution" title="Experimental Plugin" %}
 The `@nx/dotnet` plugin is currently experimental. Features and APIs may change.
 {% /aside %}
@@ -228,3 +232,10 @@ nx build my-app --configuration release
 # Build with Debug configuration (usually the default)
 nx build my-app --configuration debug
 ```
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate .NET projects and code" href="/docs/technologies/dotnet/generators" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/dotnet updates" href="/docs/technologies/dotnet/migrations" /%}
+{% /cardgrid %}

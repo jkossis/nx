@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 Playwright is a modern web test runner. With included features such as:
 
 - Cross browser support, including mobile browsers
@@ -285,3 +289,11 @@ export default defineConfig({
 ```
 
 See the [Playwright configuration docs](https://playwright.dev/docs/test-configuration) for more options for Playwright.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Playwright for your projects" href="/docs/technologies/test-tools/playwright/generators" /%}
+{% linkcard title="Executors" description="Run e2e tests with Playwright" href="/docs/technologies/test-tools/playwright/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/playwright updates" href="/docs/technologies/test-tools/playwright/migrations" /%}
+{% /cardgrid %}

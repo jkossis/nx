@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for Remix contains executors, generators, and utilities for managing Remix applications and libraries
 within an Nx workspace. It provides:
 
@@ -281,3 +285,11 @@ export const loader = adminLoader;
 You can see an example of an Nx Workspace using Remix by clicking below.
 
 {% github_repository url="https://github.com/nrwl/nx-recipes/tree/main/remix" /%}
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Remix applications, libraries, routes, and more" href="/docs/technologies/react/remix/generators" /%}
+{% linkcard title="Executors" description="Run builds, serve, and other tasks for Remix projects" href="/docs/technologies/react/remix/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/remix updates" href="/docs/technologies/react/remix/migrations" /%}
+{% /cardgrid %}

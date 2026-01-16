@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 Detox is gray box end-to-end testing and automation library for mobile apps. It has a lot of great features:
 
 - Cross Platform
@@ -121,3 +125,11 @@ In addition, to override the device name specified in a configuration, you could
 nx test-ios frontend-e2e --device-name "iPhone 11"
 nx test-android frontend-e2e --device-name "Pixel_4a_API_30"
 ```
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Detox for your mobile applications" href="/docs/technologies/test-tools/detox/generators" /%}
+{% linkcard title="Executors" description="Build and test mobile applications with Detox" href="/docs/technologies/test-tools/detox/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/detox updates" href="/docs/technologies/test-tools/detox/migrations" /%}
+{% /cardgrid %}

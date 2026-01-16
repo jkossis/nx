@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for Rollup contains executors and generators that support building applications using Rollup.
 
 ## Setting Up @nx/rollup
@@ -35,3 +39,11 @@ nx g @nx/js:lib mylib --bundler=rollup
 ```
 
 This will create a new library configured to use Rollup for building.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Rollup for your projects" href="/docs/technologies/build-tools/rollup/generators" /%}
+{% linkcard title="Executors" description="Build libraries using Rollup" href="/docs/technologies/build-tools/rollup/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/rollup updates" href="/docs/technologies/build-tools/rollup/migrations" /%}
+{% /cardgrid %}

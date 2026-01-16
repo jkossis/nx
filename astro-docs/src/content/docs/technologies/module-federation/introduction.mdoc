@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for executors and migrations in the [Plugin API Reference section below](#plugin-api-reference).
+{% /aside %}
+
 The `NxModuleFederationPlugin` is a [Rspack](https://rspack.dev) plugin that handles module federation in Nx Workspaces. It aims to provide the same Developer Experience(DX) that you would normally receive from using Nx's `withModuleFederation` function.
 
 ## Usage
@@ -168,3 +172,10 @@ export type NxModuleFederationConfigOverride = Omit<
   'exposes' | 'remotes' | 'name' | 'shared' | 'filename'
 >;
 ```
+
+## Plugin API Reference
+
+{% cardgrid %}
+{% linkcard title="Executors" description="Run module federation build and serve tasks" href="/docs/technologies/module-federation/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/module-federation updates" href="/docs/technologies/module-federation/migrations" /%}
+{% /cardgrid %}

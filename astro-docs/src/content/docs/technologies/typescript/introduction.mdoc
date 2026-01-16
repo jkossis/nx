@@ -7,6 +7,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The JS plugin contains executors and generators that are useful for JavaScript/TypeScript projects in an Nx workspace.
 
 ## Setting Up @nx/js
@@ -218,3 +222,11 @@ nx g @nx/js:convert-to-swc my-buildable-lib
 Now the `build` command will use `@nx/js:swc` executor to compile your libraries.
 
 > The first time you generate a `swc` library or convert a `tsc` library over to `swc`, `@nx/js` will install the necessary dependencies to use `swc`.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate JavaScript/TypeScript libraries" href="/docs/technologies/typescript/generators" /%}
+{% linkcard title="Executors" description="Run builds and other tasks for JS/TS projects" href="/docs/technologies/typescript/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/js updates" href="/docs/technologies/typescript/migrations" /%}
+{% /cardgrid %}

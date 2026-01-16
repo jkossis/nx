@@ -7,6 +7,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The React plugin contains executors and generators for managing React applications and libraries within an Nx workspace.
 It provides:
 
@@ -142,3 +146,11 @@ The library in `dist` is publishable to npm or a private registry.
 - [Using Cypress](/docs/technologies/test-tools/cypress/introduction)
 - [Using Jest](/docs/technologies/test-tools/jest/introduction)
 - [Using Storybook](/docs/technologies/test-tools/storybook/guides/overview-react)
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate React applications, libraries, components, hooks, and more" href="/docs/technologies/react/generators" /%}
+{% linkcard title="Executors" description="Run builds, serve, and other tasks for React projects" href="/docs/technologies/react/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/react updates" href="/docs/technologies/react/migrations" /%}
+{% /cardgrid %}

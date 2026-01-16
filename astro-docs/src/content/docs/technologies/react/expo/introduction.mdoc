@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 Expo is an open-source framework for apps that run natively on Android, iOS, and the web. Expo brings together the best of mobile and the web and enables many important features for building and scaling an app.
 
 Expo is a set of tools built on top of React Native. The Nx Plugin for Expo contains generators for managing Expo applications and libraries within an Nx workspace.
@@ -350,3 +354,11 @@ Below table is a map between expo commands and Nx commands:
 
 - [Using Detox](/docs/technologies/test-tools/detox/introduction)
 - [Using Jest](/docs/technologies/test-tools/jest/introduction)
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Expo applications, libraries, and components" href="/docs/technologies/react/expo/generators" /%}
+{% linkcard title="Executors" description="Run builds, serve, and other tasks for Expo projects" href="/docs/technologies/react/expo/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/expo updates" href="/docs/technologies/react/expo/migrations" /%}
+{% /cardgrid %}

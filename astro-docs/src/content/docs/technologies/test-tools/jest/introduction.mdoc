@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 [Jest](https://jestjs.io/) is an open source test runner created by Facebook. It has a lot of great features:
 
 - Immersive watch mode for providing near instant feedback when developing tests.
@@ -392,3 +396,11 @@ export default async function () {
 ## More Documentation
 
 - [Jest Docs](https://jestjs.io/)
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Jest for your projects" href="/docs/technologies/test-tools/jest/generators" /%}
+{% linkcard title="Executors" description="Run tests with Jest" href="/docs/technologies/test-tools/jest/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/jest updates" href="/docs/technologies/test-tools/jest/migrations" /%}
+{% /cardgrid %}

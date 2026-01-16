@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for Rspack contains executors, generators, and utilities for managing Rspack projects in an Nx Workspace.
 
 ## Setting Up @nx/rspack
@@ -79,3 +83,11 @@ nx g @nx/react:app my-app --bundler=rspack
 You can use the `@nx/rspack:configuration` generator to change your React to use Rspack. This generator will modify your project's configuration to use Rspack, and it will also install all the necessary dependencies, including the `@nx/rspack` plugin.
 
 You can read more about this generator on the [`@nx/rspack:configuration`](/docs/technologies/build-tools/rspack/generators#configuration) generator page.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Rspack for your projects" href="/docs/technologies/build-tools/rspack/generators" /%}
+{% linkcard title="Executors" description="Build and serve applications using Rspack" href="/docs/technologies/build-tools/rspack/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/rspack updates" href="/docs/technologies/build-tools/rspack/migrations" /%}
+{% /cardgrid %}

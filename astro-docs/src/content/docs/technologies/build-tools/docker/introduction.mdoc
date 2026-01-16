@@ -7,6 +7,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for executors and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for Docker contains executors and utilities for building and publishing docker images within an Nx workspace.
 Using the `@nx/docker` [Inference Plugin](/docs/concepts/inferred-tasks), Nx will automatically detect `Dockerfile`'s in your workspace and provide a `docker:build` and `docker:run` target for each.
 It will also provide a `nx-release-publish` target for publishing docker images to a registry.
@@ -187,3 +191,10 @@ The `@nx/docker` plugin provides a `nx-release-publish` target for publishing do
 [Nx Release](/docs/features/manage-releases) was also updated to support versioning docker images, generating changelogs, and publishing docker images to a registry through a single command.
 
 You can learn more about how to manage releases for Docker Images in the [Release Docker Images](/docs/guides/nx-release/release-docker-images) guide.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Executors" description="Build and publish Docker images" href="/docs/technologies/build-tools/docker/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/docker updates" href="/docs/technologies/build-tools/docker/migrations" /%}
+{% /cardgrid %}

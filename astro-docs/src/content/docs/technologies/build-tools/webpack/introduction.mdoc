@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx plugin for [webpack](https://webpack.js.org/).
 
 [Webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications. The `@nx/webpack` plugin provides executors that allow you to build and serve your projects using webpack, plus an executor for SSR.
@@ -99,3 +103,11 @@ To generate a Web application using Webpack, run the following:
 ```bash {% frame="none" %}
 nx g @nx/web:app apps/my-app --bundler=webpack
 ```
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Webpack for your projects" href="/docs/technologies/build-tools/webpack/generators" /%}
+{% linkcard title="Executors" description="Build and serve applications using Webpack" href="/docs/technologies/build-tools/webpack/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/webpack updates" href="/docs/technologies/build-tools/webpack/migrations" /%}
+{% /cardgrid %}

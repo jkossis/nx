@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 [Gradle](https://gradle.org/) is a fast, dependable, and adaptable open-source build automation tool with an elegant and extensible declarative build language. Gradle supports Android, Java, Kotlin Multiplatform, Groovy, Scala, Javascript, and C/C++.
 
 The Nx plugin for Gradle registers Gradle projects in your Nx workspace. It allows Gradle tasks to be run through Nx. Nx effortlessly makes your [CI faster](/docs/guides/nx-cloud/setup-ci).
@@ -429,3 +433,11 @@ tasks.named('integrationTest') {
 - `array(key, ...values)` - Set array values
 - `set(key) { ... }` - Create nested objects
 - `merge(map)` - Merge a map of properties
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate CI workflows and other Gradle-related files" href="/docs/technologies/java/gradle/generators" /%}
+{% linkcard title="Executors" description="Run Gradle tasks through Nx" href="/docs/technologies/java/gradle/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/gradle updates" href="/docs/technologies/java/gradle/migrations" /%}
+{% /cardgrid %}

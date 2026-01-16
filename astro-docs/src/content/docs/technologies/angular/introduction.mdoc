@@ -8,6 +8,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for Angular contains executors, generators, and utilities for managing Angular applications and libraries
 within an Nx workspace. It also enables using Angular Devkit builders and schematics in Nx workspaces.
 
@@ -121,3 +125,11 @@ nx g @nx/angular:service apps/appName/src/lib/my-service/my-service
 - [Migrating from the Angular CLI](/docs/technologies/angular/migration/angular)
 - [Setup Module Federation with Angular and Nx](/docs/technologies/module-federation/concepts/faster-builds-with-module-federation)
 - [Using Tailwind CSS with Angular projects](/docs/technologies/angular/guides/using-tailwind-css-with-angular-projects)
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Angular applications, libraries, components, and more" href="/docs/technologies/angular/generators" /%}
+{% linkcard title="Executors" description="Run builds, serve, and other tasks for Angular projects" href="/docs/technologies/angular/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/angular updates" href="/docs/technologies/angular/migrations" /%}
+{% /cardgrid %}

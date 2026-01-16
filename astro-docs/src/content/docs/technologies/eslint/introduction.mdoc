@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The ESLint plugin integrates [ESLint](https://eslint.org/) with Nx. It allows you to run ESLint through Nx with caching enabled. It also includes code generators to help you set up ESLint in your workspace.
 
 ## Setting Up @nx/eslint
@@ -82,3 +86,11 @@ nx lint my-project
 ## ESLint plugin
 
 Read about our dedicated ESLint plugin - [eslint-plugin-nx](/docs/technologies/eslint/eslint-plugin).
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate ESLint configurations and utilities" href="/docs/technologies/eslint/generators" /%}
+{% linkcard title="Executors" description="Run ESLint checks on your projects" href="/docs/technologies/eslint/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/eslint updates" href="/docs/technologies/eslint/migrations" /%}
+{% /cardgrid %}

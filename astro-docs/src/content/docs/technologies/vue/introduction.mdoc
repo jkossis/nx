@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx plugin for [Vue](https://vuejs.org/).
 
 ## Setting Up @nx/vue
@@ -43,3 +47,11 @@ To generate a Vue library, run the following:
 ```shell
 nx g @nx/vue:lib libs/my-lib
 ```
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Vue applications, libraries, and components" href="/docs/technologies/vue/generators" /%}
+{% linkcard title="Executors" description="Run builds, serve, and other tasks for Vue projects" href="/docs/technologies/vue/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/vue updates" href="/docs/technologies/vue/migrations" /%}
+{% /cardgrid %}

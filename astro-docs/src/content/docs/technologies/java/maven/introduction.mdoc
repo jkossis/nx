@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 {% aside type="caution" title="Experimental Plugin" %}
 The `@nx/maven` plugin is currently experimental. Features and APIs may change.
 {% /aside %}
@@ -117,3 +121,10 @@ The `@nx/maven` is configured in the `plugins` array in `nx.json`.
 ```
 
 Once the plugin has been added, `@nx/maven` will automatically retrieve information about projects from Maven and create targets for each phase, goal, and some additional targets for CI.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Maven-related files and configurations" href="/docs/technologies/java/maven/generators" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/maven updates" href="/docs/technologies/java/maven/migrations" /%}
+{% /cardgrid %}

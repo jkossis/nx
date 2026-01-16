@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx Plugin for [esbuild](https://esbuild.github.io/api/), an extremely fast JavaScript bundler.
 
 Why should you use this plugin?
@@ -137,3 +141,11 @@ Extra API options for esbuild can be passed in the `esbuildOptions` object for y
 ## More Documentation
 
 - [Using JS](/docs/technologies/typescript/introduction)
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure esbuild for your projects" href="/docs/technologies/build-tools/esbuild/generators" /%}
+{% linkcard title="Executors" description="Build applications using esbuild" href="/docs/technologies/build-tools/esbuild/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/esbuild updates" href="/docs/technologies/build-tools/esbuild/migrations" /%}
+{% /cardgrid %}

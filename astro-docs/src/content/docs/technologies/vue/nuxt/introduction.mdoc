@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx plugin for [Nuxt](https://nuxt.com/).
 
 ## Setting up a new Nx workspace with @nx/nuxt
@@ -106,3 +110,10 @@ This command performs several actions:
 1. It will build the Nuxt application and generate the static HTML files.
 2. It will serve the static HTML files using a simple HTTP server.
 3. It will run the Cypress tests against the served static HTML files.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Generate Nuxt applications and libraries" href="/docs/technologies/vue/nuxt/generators" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/nuxt updates" href="/docs/technologies/vue/nuxt/migrations" /%}
+{% /cardgrid %}

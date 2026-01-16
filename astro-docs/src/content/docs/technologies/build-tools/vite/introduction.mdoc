@@ -6,6 +6,10 @@ sidebar:
 filter: 'type:References'
 ---
 
+{% aside type="tip" title="Looking for API docs?" %}
+Find the detailed API documentation for generators, executors, and migrations in the [API Reference section below](#api-reference).
+{% /aside %}
+
 The Nx plugin for [Vite](https://vite.dev/) and [Vitest](https://vitest.dev/).
 
 [Vite](https://vite.dev/) is a build tool that aims to provide a faster and leaner development experience for modern web projects.
@@ -125,3 +129,11 @@ You can read more about this generator on the [`@nx/vite:configuration`](/docs/t
 You can use the `@nx/vite:vitest` generator to generate Vitest configuration for your project. This generator will generate a `vitest.config.ts` file in the root of your project, and it will also install all the necessary dependencies.
 
 You can read more about this generator on the [`@nx/vite:vitest`](/docs/technologies/build-tools/vite/generators#vitest) generator page.
+
+## API Reference
+
+{% cardgrid %}
+{% linkcard title="Generators" description="Configure Vite and Vitest for your projects" href="/docs/technologies/build-tools/vite/generators" /%}
+{% linkcard title="Executors" description="Build, serve, preview, and test applications using Vite" href="/docs/technologies/build-tools/vite/executors" /%}
+{% linkcard title="Migrations" description="Automatic migrations for @nx/vite updates" href="/docs/technologies/build-tools/vite/migrations" /%}
+{% /cardgrid %}
