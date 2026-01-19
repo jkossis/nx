@@ -279,11 +279,10 @@ export function runCommandAsync(
 export function runCommandUntil(
   command: string,
   criteria: (output: string) => boolean,
-  opts: RunCmdOpts = {
-    env: undefined,
-  }
+  opts: RunCmdOpts & { timeout?: number } = {}
 ): Promise<ChildProcess> {
   const pm = getPackageManagerCommand();
+  const timeout = opts.timeout ?? 30_000;
   const p = exec(`${pm.runNx} ${command}`, {
     cwd: tmpProjPath(),
     encoding: 'utf-8',
@@ -301,10 +300,26 @@ export function runCommandUntil(
     let output = '';
     let complete = false;
 
+    const timeoutId = setTimeout(() => {
+      if (!complete) {
+        complete = true;
+        p.kill();
+        logError(
+          `Timed out after ${timeout}ms waiting for criteria. Output:`,
+          output
+            .split('\n')
+            .map((l) => `    ${l}`)
+            .join('\n')
+        );
+        rej(new Error(`Timed out after ${timeout}ms waiting for criteria`));
+      }
+    }, timeout);
+
     function checkCriteria(c) {
       output += c.toString();
       if (criteria(stripConsoleColors(output)) && !complete) {
         complete = true;
+        clearTimeout(timeoutId);
         res(p);
       }
     }
@@ -313,6 +328,7 @@ export function runCommandUntil(
     p.stderr?.on('data', checkCriteria);
     p.on('exit', (code) => {
       if (!complete) {
+        clearTimeout(timeoutId);
         logError(
           `Original output:`,
           output
