@@ -91,6 +91,7 @@ export function getTuiTerminalSummaryLifeCycle({
     for (const { task, status } of taskResults) {
       totalCompletedTasks++;
       inProgressTasks.delete(task.id);
+      tasksToTaskStatus[task.id] = status;
 
       switch (status) {
         case 'remote-cache':
