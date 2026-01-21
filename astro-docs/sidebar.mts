@@ -28,6 +28,7 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
       },
       {
         label: 'Tutorials',
+        collapsed: true,
         autogenerate: {
           directory: 'getting-started/Tutorials',
           collapsed: true,
@@ -64,7 +65,7 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
         label: 'Updating Dependencies',
       },
       {
-        link: 'getting-started/nx-cloud',
+        link: 'guides/nx-cloud/setup-ci',
         label: 'Setup CI',
       },
       {
@@ -105,9 +106,19 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
     label: 'Advanced Nx',
     collapsed: true,
     items: [
+      // TODO: we need a outputs docs I feel or having a inputs & outputs combo doc since outputs are pretty simple
+      {
+        label: 'Target Inputs',
+        link: 'reference/inputs',
+      },
+      { label: 'Inferred Tasks', link: 'concepts/inferred-tasks' },
       {
         label: 'Filter Affected Projects',
         link: 'features/ci-features/affected',
+      },
+      {
+        label: 'Update Strategies',
+        link: 'guides/tips-n-tricks/advanced-update',
       },
       {
         label: 'Enforce Module Boundaries',
@@ -115,27 +126,53 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
         // link: 'features/enforce-module-boundaries',
         link: 'guides/enforce-module-boundaries',
       },
-      // TODO: we need a outputs docs I feel or having a inputs & outputs combo doc since outputs are pretty simple
       {
-        label: 'Target Inputs',
-        link: 'reference/inputs',
+        label: 'Improve CI',
+        collapsed: true,
+        items: [
+          {
+            label: 'Time To Green (TTG)',
+            link: 'guides/nx-cloud/optimize-your-ttg',
+          },
+          {
+            label: 'Enable Source Control Integrations',
+            link: 'guides/nx-cloud/source-control-integration',
+          },
+          {
+            label: 'Recored non Nx commands',
+            link: 'guides/nx-cloud/record-commands',
+          },
+          {
+            label: 'Track Resource Usage',
+            link: 'guides/nx-cloud/ci-resource-usage',
+          },
+          {
+            label: 'View Affected Projects',
+            link: 'guides/nx-cloud/cipe-affected-project-graph',
+          },
+        ],
       },
       {
-        label: 'Buildable and Publishable Libraries',
-        link: 'concepts/buildable-and-publishable-libraries',
+        label: 'Nx Daemon',
+        link: 'concepts/nx-daemon',
       },
+      { label: 'Nx Replay', link: 'features/ci-features/remote-cache' },
       {
-        label: 'Update Strategies',
-        link: 'guides/tips-n-tricks/advanced-update',
-      },
-      {
-        label: 'Nx Cloud Source Control Integration',
-        link: 'guides/nx-cloud/source-control-integration',
+        label: 'Self-Healing CI',
+        link: 'features/ci-features/self-healing-ci',
       },
       {
         label: 'Nx Agents',
         collapsed: true,
         items: [
+          {
+            label: 'Distrubuted Task Execution',
+            link: 'features/ci-features/distributed-task-execution',
+          },
+          {
+            label: 'Dynamic Agents',
+            link: 'features/ci-features/dynamic-agents',
+          },
           {
             label: 'Assignment Rules',
             link: 'reference/nx-cloud/assignment-rules',
@@ -150,7 +187,31 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
           },
           {
             label: 'Custom Images',
-            link: 'reference/nx-cloud/custom-steps',
+            link: 'reference/nx-cloud/custom-images',
+          },
+        ],
+      },
+      { label: 'Flaky Tasks', link: 'features/ci-features/flaky-tasks' },
+      { label: 'Split Tasks', link: 'features/ci-features/split-e2e-tasks' },
+      {
+        label: 'Cache Security',
+        collapsed: true,
+        items: [
+          {
+            label: 'Overview',
+            link: 'concepts/ci-concepts/cache-security',
+          },
+          {
+            label: 'CI Access Tokens',
+            link: 'guides/nx-cloud/access-tokens',
+          },
+          {
+            label: 'Personal Access Tokens',
+            link: 'guides/nx-cloud/personal-access-tokens',
+          },
+          {
+            label: 'Encryption',
+            link: 'guides/nx-cloud/encryption',
           },
         ],
       },
@@ -164,18 +225,145 @@ export const sidebar: StarlightUserConfig['sidebar'] = [
         collapsed: true,
         autogenerate: { directory: 'enterprise', collapsed: true },
         // TODO: Move conformance & owners information to here
+        // TODO: add manual DTE
       },
       {
         // more detailed guides about adopting nx seperate from the getting started quickstarts
         label: 'Adopting Nx',
+        collapsed: true,
         autogenerate: { directory: 'guides/Adopting Nx', collapsed: true },
       },
+      {
+        label: 'Understanding Configurations',
+        collapsed: true,
+        items: [
+          {
+            label: 'Types of Configs',
+            link: 'concepts/types-of-configurations',
+          },
+          {
+            label: 'Task Pipelines',
+            link: 'concepts/task-pipeline-configuration',
+          },
+          {
+            label: 'Executors',
+            link: 'concepts/executors-and-configurations',
+          },
+        ],
+      },
+      {
+        label: 'Buildable and Publishable Libraries',
+        link: 'concepts/buildable-and-publishable-libraries',
+      },
+      {
+        label: 'Workspace Decisions',
+        collapsed: true,
+        autogenerate: {
+          directory: 'concepts/decisions/workspace-decisions',
+          collapsed: true,
+        },
+      },
+      { label: 'Vue', link: 'technologies/vue/introduction' },
+      { label: 'Node.js', link: 'technologies/node/introduction' },
+      { label: '.NET', link: 'technologies/dotnet/introduction' },
+      { label: 'ESLint', link: 'technologies/eslint/introduction' },
+      {
+        label: 'Module Federation',
+        link: 'technologies/module-federation/introduction',
+      },
+      {
+        label: 'Webpack',
+        link: 'technologies/build-tools/webpack/introduction',
+      },
+      { label: 'Vite', link: 'technologies/build-tools/vite/introduction' },
+      {
+        label: 'ESBuild',
+        link: 'technologies/build-tools/esbuild/introduction',
+      },
+      { label: 'Rollup', link: 'technologies/build-tools/rollup/introduction' },
+      { label: 'Rspack', link: 'technologies/build-tools/rspack/introduction' },
+      {
+        label: 'Rsbuild',
+        link: 'technologies/build-tools/rsbuild/introduction',
+      },
+      { label: 'Docker', link: 'technologies/build-tools/docker/introduction' },
+      { label: 'Jest', link: 'technologies/test-tools/jest/introduction' },
+      { label: 'Vitest', link: 'technologies/test-tools/vitest/introduction' },
+      {
+        label: 'Cypress',
+        link: 'technologies/test-tools/cypress/introduction',
+      },
+      {
+        label: 'Playwright',
+        link: 'technologies/test-tools/playwright/introduction',
+      },
+      {
+        label: 'Storybook',
+        link: 'technologies/test-tools/storybook/introduction',
+      },
+      { label: 'Detox', link: 'technologies/test-tools/detox/introduction' },
     ],
   },
   {
     label: 'Extending Nx',
     collapsed: true,
-    autogenerate: { directory: 'extending-nx', collapsed: true },
+    items: [
+      { label: 'Intro', link: 'extending-nx/intro' },
+      { label: 'What Are Nx Plugins?', link: 'concepts/nx-plugins' },
+      { label: 'Local Generators', link: 'extending-nx/local-generators' },
+      {
+        label: 'Creating Files with a Generator',
+        link: 'extending-nx/creating-files',
+      },
+      {
+        label: 'Modifying Files with a Generator',
+        link: 'extending-nx/modifying-files',
+      },
+      {
+        label: 'Composing Generators',
+        link: 'extending-nx/composing-generators',
+      },
+      {
+        label: 'Write a Simple Executor',
+        link: 'extending-nx/local-executors',
+      },
+      { label: 'Compose Executors', link: 'extending-nx/compose-executors' },
+      { label: 'Sync Generators', link: 'concepts/sync-generators' },
+      {
+        label: 'Create a Sync Generator',
+        link: 'extending-nx/create-sync-generator',
+      },
+      {
+        label: 'Extending the Project Graph',
+        link: 'extending-nx/project-graph-plugins',
+      },
+      {
+        label: 'Migration Generators',
+        link: 'extending-nx/migration-generators',
+      },
+      {
+        label: 'Task Running Lifecycle',
+        link: 'extending-nx/task-running-lifecycle',
+      },
+      {
+        label: 'Integrate a New Tool with a Tooling Plugin',
+        link: 'extending-nx/tooling-plugin',
+      },
+      {
+        label: 'Enforce Organizational Best Practices with a Local Plugin',
+        link: 'extending-nx/organization-specific-plugin',
+      },
+      { label: 'Publish Your Nx Plugin', link: 'extending-nx/publish-plugin' },
+      { label: 'Custom Plugin Preset', link: 'extending-nx/create-preset' },
+      {
+        label: 'Creating an Install Package',
+        link: 'extending-nx/create-install-package',
+      },
+      {
+        label: 'CreateNodes API Compatibility',
+        link: 'extending-nx/createnodes-compatibility',
+      },
+    ],
   },
   {
     label: 'References',
