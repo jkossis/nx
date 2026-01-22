@@ -49,6 +49,8 @@ export class AnalyticsCollector {
         'Google%20Chrome;111.0.5563.64|Not(A%3ABrand;8.0.0.0|Chromium;111.0.5563.64',
     };
 
+    this.requestParameters[RequestParameter.DebugView] = 1;
+
     const nodeVersion = parse(process.version);
 
     this.userParameters = {
@@ -91,12 +93,22 @@ export class AnalyticsCollector {
     }
   }
 
-  event(eventName: string, parameters?: Record<string, ParameterValue>): void {
+  event(
+    eventName: string,
+    parameters?: Record<string, ParameterValue>,
+    isPageView?: boolean
+  ): void {
+    this.requestParameters[RequestParameter.PageLocation] = isPageView
+      ? '/' + eventName
+      : undefined;
+    this.requestParameters[RequestParameter.PageTitle] = isPageView
+      ? '/' + eventName
+      : undefined;
     this.eventsQueue ??= [];
     this.eventsQueue.push({
       ...this.userParameters,
       ...parameters,
-      en: eventName,
+      en: isPageView ? 'page_view' : eventName,
     });
   }
 

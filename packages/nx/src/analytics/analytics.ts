@@ -34,7 +34,8 @@ export async function startAnalytics() {
 }
 
 export function reportCommandRunEvent(command: string) {
-  trackEvent('run_command', { [EventCustomDimension.Command]: command });
+  command = command === 'g' ? 'generate' : command;
+  trackEvent(command, undefined, true);
 }
 
 export function reportProjectGraphCreationEvent(time: number) {
@@ -45,10 +46,11 @@ export function reportProjectGraphCreationEvent(time: number) {
 
 function trackEvent(
   eventName: string,
-  parameters?: Record<string, ParameterValue>
+  parameters?: Record<string, ParameterValue>,
+  isPageView?: boolean
 ) {
   if (_analyticsCollector) {
-    _analyticsCollector.event(eventName, parameters);
+    _analyticsCollector.event(eventName, parameters, isPageView);
   }
 }
 
