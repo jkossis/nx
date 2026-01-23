@@ -1536,6 +1536,14 @@ const removeEvolvingNx = {
 };
 
 /**
+ * Devkit moved from /reference/devkit to /extending-nx/devkit
+ */
+const devkitMoveRedirects = {
+  '/reference/devkit': '/extending-nx/devkit',
+  '/reference/devkit/:slug*': '/extending-nx/devkit/:slug*',
+};
+
+/**
  * Public export API
  */
 module.exports = {
@@ -1581,4 +1589,5 @@ module.exports = {
   contentDedupeRedirects,
   docsToAstroRedirects: docsToAstroRedirects,
   removeEvolvingNx,
+  devkitMoveRedirects,
 };

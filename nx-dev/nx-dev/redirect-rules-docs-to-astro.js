@@ -6,7 +6,7 @@ const docsToAstroRedirects = {
   // These wildcards replace many individual redirect rules
 
   '/reference/core-api/devkit/documents/:slug*':
-    '/docs/reference/devkit/:slug*',
+    '/docs/extending-nx/devkit/:slug*',
   '/reference/core-api/nx/documents/:slug*': '/docs/reference/nx-commands',
   '/technologies/react/expo/api/executors/:slug*':
     '/docs/technologies/react/expo/executors',
@@ -444,7 +444,7 @@ const docsToAstroRedirects = {
   '/reference/core-api/shared-fs-cache/overview':
     '/docs/reference/remote-cache-plugins/shared-fs-cache/overview',
   '/reference/core-api/devkit/documents/Migration':
-    '/docs/reference/devkit/migration',
+    '/docs/extending-nx/devkit/migration',
   '/reference/core-api/workspace/documents/overview':
     '/docs/reference/conformance/overview',
   '/reference/core-api/conformance/documents/overview':
@@ -463,20 +463,20 @@ const docsToAstroRedirects = {
   '/reference/core-api/web': '/reference/web',
   '/reference/core-api/create-nx-workspace':
     '/docs/reference/create-nx-workspace',
-  '/reference/core-api/devkit/documents': '/docs/reference/devkit',
-  '/reference/core-api/devkit': '/docs/reference/devkit',
-  '/reference/core-api/devkit/documents/README': '/docs/reference/devkit',
+  '/reference/core-api/devkit/documents': '/docs/extending-nx/devkit',
+  '/reference/core-api/devkit': '/docs/extending-nx/devkit',
+  '/reference/core-api/devkit/documents/README': '/docs/extending-nx/devkit',
   '/reference/core-api/devkit/documents/ngcli_adapter/README':
-    '/docs/reference/devkit/ngcli_adapter',
+    '/docs/extending-nx/devkit/ngcli_adapter',
   '/reference/core-api/devkit/documents/runTasksInSerial':
     '/docs/reference/benchmarks/caching',
   '/reference/core-api/devkit/documents/serializeJson':
     '/docs/reference/benchmarks/caching',
   '/reference/core-api/devkit/documents/stripIndents':
     '/docs/reference/benchmarks/caching',
-  '/reference/core-api/devkit/executors': '/docs/reference/devkit',
-  '/reference/core-api/devkit/generators': '/docs/reference/devkit',
-  '/reference/core-api/devkit/migrations': '/docs/reference/devkit',
+  '/reference/core-api/devkit/executors': '/docs/extending-nx/devkit',
+  '/reference/core-api/devkit/generators': '/docs/extending-nx/devkit',
+  '/reference/core-api/devkit/migrations': '/docs/extending-nx/devkit',
   '/reference/core-api/nx/documents': '/docs/reference/nx-commands',
   '/reference/core-api/nx/documents/create-nx-workspace':
     'https://canary.nx.dev/docs/reference/create-nx-workspace',
