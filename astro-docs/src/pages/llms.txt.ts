@@ -182,7 +182,7 @@ export const GET: APIRoute = async ({ site }) => {
 
     for (const entry of devkitApiEntries) {
       const encodedSlug = entry.slug.replace(/ /g, '%20');
-      const url = `${siteUrl}/docs/reference/devkit/${encodedSlug}.md`;
+      const url = `${siteUrl}/docs/extending-nx/devkit/${encodedSlug}.md`;
       lines.push(`- [${entry.title}](${url})`);
     }
     lines.push('');

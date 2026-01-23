@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('links in descriptions of properties should correctly link to the same page w/ url fragments', async ({
   page,
 }) => {
-  await page.goto('/docs/reference/devkit/NxJsonConfiguration');
+  await page.goto('/docs/extending-nx/devkit/NxJsonConfiguration');
 
   await expect(
     page.getByRole('heading', { name: 'NxJsonConfiguration' })
@@ -32,7 +32,7 @@ test('links in descriptions of properties should correctly link to the same page
 
   await expect(linkedProperty).toHaveAttribute(
     'href',
-    '/docs/reference/devkit/NxJsonConfiguration#tasksrunneroptions'
+    '/docs/extending-nx/devkit/NxJsonConfiguration#tasksrunneroptions'
   );
 
   await linkedProperty.click();

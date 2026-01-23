@@ -29,12 +29,18 @@ export const onRequest = defineRouteMiddleware(async (context) => {
   const { sidebar } = context.locals.starlightRoute;
 
   const refSection = sidebar.find((s) => s.label === 'Reference');
+  const extendingNxSection = sidebar.find((s) => s.label === 'Extending Nx');
+
+  // Add devkit section to Extending Nx (do this regardless of Reference section)
+  if (extendingNxSection && 'entries' in extendingNxSection) {
+    const devkitSection = await getDevKitSection(context.locals.starlightRoute);
+    extendingNxSection.entries.push(devkitSection);
+  }
 
   if (!refSection || !('entries' in refSection)) {
     return;
   }
 
-  const devkitSection = await getDevKitSection(context.locals.starlightRoute);
   const nxSection = await getNxPackageSection(
     'nx',
     context.locals.starlightRoute
@@ -75,13 +81,12 @@ export const onRequest = defineRouteMiddleware(async (context) => {
     attrs: {},
   };
 
-  // Apply sorting to reference entries
+  // Apply sorting to reference entries (devkit moved to Extending Nx section)
   const newEntries = [
     ...commandSection,
     pluginRegistryLink,
     changelogLink,
     nxSection,
-    devkitSection,
     webSection,
     workspaceSection,
     pluginSection,
@@ -97,9 +102,9 @@ async function getDevKitSection({ entry }: StarlightRouteData) {
   const devkitOverview: SidebarLink = {
     type: 'link',
     label: 'Overview',
-    href: '/docs/reference/devkit',
+    href: '/docs/extending-nx/devkit',
     badge: undefined,
-    isCurrent: entry.slug === 'reference/devkit',
+    isCurrent: entry.slug === 'extending-nx/devkit',
     attrs: {},
   };
 
@@ -119,10 +124,10 @@ async function getDevKitSection({ entry }: StarlightRouteData) {
     (record): SidebarLink => ({
       type: 'link',
       label: record.props.doc.data.title,
-      href: `/docs/reference/devkit/${record.props.doc.data.slug}`,
+      href: `/docs/extending-nx/devkit/${record.props.doc.data.slug}`,
       badge: undefined,
       isCurrent:
-        entry.slug === `reference/devkit/${record.props.doc.data.slug}`,
+        entry.slug === `extending-nx/devkit/${record.props.doc.data.slug}`,
       attrs: {},
     })
   );
@@ -130,9 +135,9 @@ async function getDevKitSection({ entry }: StarlightRouteData) {
   const ngcliOverview: SidebarLink = {
     type: 'link',
     label: 'Overview',
-    href: '/docs/reference/devkit/ngcli_adapter',
+    href: '/docs/extending-nx/devkit/ngcli_adapter',
     badge: undefined,
-    isCurrent: entry.slug === 'reference/devkit/ngcli_adapter',
+    isCurrent: entry.slug === 'extending-nx/devkit/ngcli_adapter',
     attrs: {},
   };
 
@@ -140,10 +145,10 @@ async function getDevKitSection({ entry }: StarlightRouteData) {
     (record): SidebarLink => ({
       type: 'link',
       label: record.props.doc.data.title,
-      href: `/docs/reference/devkit/${record.props.doc.data.slug}`,
+      href: `/docs/extending-nx/devkit/${record.props.doc.data.slug}`,
       badge: undefined,
       isCurrent:
-        entry.slug === `reference/devkit/${record.props.doc.data.slug}`,
+        entry.slug === `extending-nx/devkit/${record.props.doc.data.slug}`,
       attrs: {},
     })
   );
@@ -152,7 +157,7 @@ async function getDevKitSection({ entry }: StarlightRouteData) {
     type: 'group',
     label: 'ngcli_adapter',
     entries: [ngcliOverview, ...ngcliRoutes],
-    collapsed: !entry.slug.startsWith('reference/devkit/ngcli_adapter'),
+    collapsed: !entry.slug.startsWith('extending-nx/devkit/ngcli_adapter'),
     badge: undefined,
   };
 
@@ -160,7 +165,7 @@ async function getDevKitSection({ entry }: StarlightRouteData) {
     type: 'group',
     label: 'Devkit',
     entries: [devkitOverview, ngcliSection, ...devkitRoutes],
-    collapsed: !entry.slug.startsWith('reference/devkit'),
+    collapsed: !entry.slug.startsWith('extending-nx/devkit'),
     badge: undefined,
   };
 

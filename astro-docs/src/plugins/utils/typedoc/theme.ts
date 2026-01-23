@@ -26,7 +26,7 @@ export default class NxMarkdownTheme extends MarkdownTheme {
     let content = super.render(page, template);
 
     // Remove type-specific directories from links to flatten URL structure
-    // e.g., /docs/reference/devkit/enums/ChangeType.md -> /docs/reference/devkit/ChangeType.md
+    // e.g., /docs/extending-nx/devkit/enums/ChangeType.md -> /docs/extending-nx/devkit/ChangeType.md
     content = content
       // Remove type directories (enums, classes, interfaces, types, variables, functions) from URLs
       .replace(

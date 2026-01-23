@@ -36,7 +36,7 @@ export async function loadDevkitPackage(
         tsconfig: join(buildDir, 'tsconfig.lib.json'),
         out: outDir,
         excludePrivate: true,
-        publicPath: '/docs/reference/devkit/',
+        publicPath: '/docs/extending-nx/devkit/',
       },
       logger
     );
@@ -58,7 +58,7 @@ export async function loadDevkitPackage(
         entryPoints: [ngcliEntryPoint],
         tsconfig: join(buildDir, 'tsconfig.lib.json'),
         out: join(outDir, 'ngcli_adapter'),
-        publicPath: '/docs/reference/devkit/ngcli_adapter/',
+        publicPath: '/docs/extending-nx/devkit/ngcli_adapter/',
       },
       logger
     );
