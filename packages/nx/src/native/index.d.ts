@@ -248,13 +248,6 @@ export interface FileMap {
 }
 
 export interface FileSetInput {
-  /** Project name, or None for workspace-level file sets */
-  project?: string
-  /** Glob patterns for the file set */
-  patterns: Array<string>
-}
-
-export interface FileSetInput {
   fileset: string
 }
 
@@ -320,8 +313,8 @@ export interface HasherOptions {
 export declare export declare function hashFile(file: string): string | null
 
 export interface HashInputs {
-  /** File sets (project-scoped or workspace-level globs) */
-  fileSets: Array<FileSetInput>
+  /** Expanded file paths that were used as inputs */
+  files: Array<string>
   /** Runtime commands */
   runtime: Array<string>
   /** Environment variable names */
